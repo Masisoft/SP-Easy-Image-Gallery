@@ -25,6 +25,8 @@ $layout = $params->get('layout', 'album');
 
 if($layout == 'albums') {
   $albums = ModSpeasyimagegalleryHelper::getAlbumList($params);
+} elseif($layout == 'tags') {
+  $images = ModSpeasyimagegalleryHelper::getImagesbyTag($params);
 } else {
   $images = ModSpeasyimagegalleryHelper::getImages($params);
 }

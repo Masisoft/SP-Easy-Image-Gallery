@@ -271,11 +271,16 @@ class SpeasyimagegalleryModelAlbum extends AdminModel
 
 	public function saveImage($attr)
 	{
+	/*	 $db = JFactory::getDBO();
+    $sql = "ALTER TABLE `#__speasyimagegallery_images` ADD COLUMN `tags` MEDIUMTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; ";
+    $db->setQuery($sql);
+		$result = $db->query();*/
 		$image = new stdClass();
 		$image->id = $attr['id'];
 		$image->title = $attr['title'];
 		$image->alt = $attr['alt'];
 		$image->description = $attr['desc'];
+		$image->tags = $attr['tags'];
 		$result = Factory::getDbo()->updateObject('#__speasyimagegallery_images', $image, 'id');
 	}
 

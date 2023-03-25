@@ -105,13 +105,15 @@ jQuery(function($) {
     var id = $this.attr('data-image'),
     title = $('#speasyimagegallery-image-field-title').val(),
     alt = $('#speasyimagegallery-image-field-alt').val(),
-    desc = $('#speasyimagegallery-image-field-desc').val()
+    desc = $('#speasyimagegallery-image-field-desc').val(),
+	tags = $('#speasyimagegallery-image-field-tags').val()
 
     var data = {
       id: id,
       title: title,
       alt: alt,
-      desc: desc
+      desc: desc,
+	  tags: tags
     }
 
     $.ajax({

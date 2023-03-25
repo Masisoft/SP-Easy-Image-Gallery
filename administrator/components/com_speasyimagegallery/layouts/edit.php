@@ -58,6 +58,17 @@ $col_css_class = SpeasyimagegalleryHelper::getVersion() < 4 ? 'span' : 'col-lg-'
 					<textarea id="speasyimagegallery-image-field-desc" rows="8" ><?php echo $image->description; ?></textarea>
 				</div>
 			</div>
+			
+			<div class="control-group">
+				<div class="control-label">
+					<label for="speasyimagegallery-image-field-tags">
+						<?php echo Text::_('COM_SPEASYIMAGEGALLERY_EDIT_IMAGE_TAGS'); ?> 
+					</label>
+				</div>
+				<div class="controls">
+					<textarea id="speasyimagegallery-image-field-tags" rows="8" ><?php echo $image->tags; ?></textarea>
+				</div>
+			</div>
 
 			<div class="control-group">
 				<a href="#" class="btn btn-success btn-large btn-block" id="btn-save-image-settings" data-image="<?php echo $image->id; ?>"><i class="fa fa-save"></i> <?php echo Text::_('COM_SPEASYIMAGEGALLERY_EDIT_SAVE'); ?></a>

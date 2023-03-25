@@ -221,12 +221,14 @@ class SpeasyimagegalleryControllerAlbums extends AdminController
 		$title = $input->get('title', '', 'STRING');
 		$alt = $input->get('alt', '', 'STRING');
 		$desc = $input->get('desc', '', 'STRING');
+		$tags = $input->get('tags', '', 'STRING');
 
 		$attr = array(
 			'id'=>$id,
 			'title'=>$title,
 			'alt'=>$alt,
-			'desc'=>$desc
+			'desc'=>$desc,
+			'tags'=>$tags
 		);
 
 		$model = $this->getModel();

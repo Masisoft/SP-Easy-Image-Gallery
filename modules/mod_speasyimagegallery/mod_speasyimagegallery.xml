@@ -26,6 +26,7 @@
 				<field name="layout" type="list" default="album" label="MOD_SPEASYIMAGEGALLERY_LAYOUT_TYPE" description="MOD_SPEASYIMAGEGALLERY_LAYOUT_TYPE_DESC">
 					<option value="album">MOD_SPEASYIMAGEGALLERY_LAYOUT_ALBUM</option>
 					<option value="albums">MOD_SPEASYIMAGEGALLERY_LAYOUT_ALBUMS</option>
+					<option value="tags">MOD_SPEASYIMAGEGALLERY_LAYOUT_TAGS</option>
 				</field>
 
 				<field name="spacer1" type="spacer" hr="true" showon="layout:albums" />

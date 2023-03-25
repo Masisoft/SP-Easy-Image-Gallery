@@ -83,6 +83,20 @@ class ModSpeasyimagegalleryHelper
 		return $db->loadObjectList();
 	}
 
+	public static function getImagesByTag($params) {
+		$tags = $params->get('tags', 0);
+		$limit = $params->get('album_limit', 8);
+		$db = Factory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select(array('a.*'));
+		$query->from($db->quoteName('#__speasyimagegallery_images', 'a'));
+		$query->where($db->quoteName('tags') . ' like '. $db->quote("%".$tags."%"));
+		$query->where($db->quoteName('state') . ' = '. $db->quote(1));
+		$query->order('a.ordering DESC');
+		$query->setLimit($limit);
+		$db->setQuery($query);
+		return $db->loadObjectList();
+	}
 	private static function getItemID() {
 		$db = Factory::getDbo();
 		$query = $db->getQuery(true);
