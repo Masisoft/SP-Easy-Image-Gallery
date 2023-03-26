@@ -58,14 +58,14 @@
 				<field name="albums_gutter" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_DESC" default="20" showon="layout:albums" />
 				<field name="albums_gutter_sm" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_SM" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_SM_DESC" default="15" showon="layout:albums" />
 				<field name="albums_gutter_xs" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_XS" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_XS_DESC" default="10" showon="layout:albums" />
-
-
-				<field name="spacer3" type="spacer" hr="true" showon="layout:album" />
+				<field name="spacer3" type="spacer" hr="true" showon="layout:tags" />
+			 
+				<field name="tags" type="textarea" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_TAGS_LABEL" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_TAGS" rows="3"		 showon="layout:tags"		/>
 				<field name="spacer4" type="spacer" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_ALBUM_OPTIONS" showon="layout:album" />
 				<field name="album_id" type="albums" label="MOD_SPEASYIMAGEGALLERY_CHOOSE_ALBUM" description="MOD_SPEASYIMAGEGALLERY_CHOOSE_ALBUM_DESC" showon="layout:album" />
-				<field name="album_limit" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_LIMIT" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_LIMIT_DESC" default="8" showon="layout:album" />
+				<field name="album_limit" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_LIMIT" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_LIMIT_DESC" default="8" showon="layout:album,tags" />
 
-				<field name="album_layout" type="list" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT_DESC" default="default" showon="layout:album">
+				<field name="album_layout" type="list" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT_DESC" default="default" showon="layout:album,tags">
 					<option value="default">MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT_DEFAULT</option>
 					<option value="mosaic">MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT_MOSAIC</option>
 					<option value="rectangle">MOD_SPEASYIMAGEGALLERY_GLOBAL_LAYOUT_RECTANGLE</option>
@@ -91,21 +91,21 @@
 					<option value="3">4</option>
 					<option value="2">6</option>
 				</field>
-				<field name="album_gutter" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_DESC" default="20" showon="layout:album" />
-				<field name="album_gutter_sm" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_SM" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_SM_DESC" default="15" showon="layout:album" />
-				<field name="album_gutter_xs" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_XS" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_XS_DESC" default="10" showon="layout:album" />
+				<field name="album_gutter" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_DESC" default="20" showon="layout:album,tags" />
+				<field name="album_gutter_sm" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_SM" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_SM_DESC" default="15" showon="layout:album,tags" />
+				<field name="album_gutter_xs" type="number" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_XS" description="MOD_SPEASYIMAGEGALLERY_GLOBAL_GUTTER_XS_DESC" default="10" showon="layout:album,tags" />
 
 				<field name="spacer5" type="spacer" hr="true" showon="layout:album" />
 				<field name="spacer6" type="spacer" label="MOD_SPEASYIMAGEGALLERY_GLOBAL_POPUP_OPTIONS" showon="layout:album" />
-				<field name="show_title" type="radio" class="btn-group" label="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_TITLE" description="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_TITLE_DESC" default="1" showon="layout:album">
+				<field name="show_title" type="radio" class="btn-group" label="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_TITLE" description="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_TITLE_DESC" default="1" showon="layout:album,tags">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="show_desc" type="radio" class="btn-group" label="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_DESC" description="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_DESC_DESC" default="1" showon="layout:album">
+				<field name="show_desc" type="radio" class="btn-group" label="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_DESC" description="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_DESC_DESC" default="1" showon="layout:album,tags">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="show_count" type="radio" class="btn-group" label="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_COUNT" description="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_COUNT_DESC" default="1" showon="layout:album">
+				<field name="show_count" type="radio" class="btn-group" label="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_COUNT" description="MOD_SPEASYIMAGEGALLERY_POPUP_SHOW_COUNT_DESC" default="1" showon="layout:album,tags">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
